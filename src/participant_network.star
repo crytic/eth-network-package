@@ -14,7 +14,7 @@ reth = import_module("github.com/kurtosis-tech/eth-network-package/src/el/reth/r
 lighthouse = import_module("github.com/kurtosis-tech/eth-network-package/src/cl/lighthouse/lighthouse_launcher.star")
 lodestar = import_module("github.com/kurtosis-tech/eth-network-package/src/cl/lodestar/lodestar_launcher.star")
 nimbus = import_module("github.com/kurtosis-tech/eth-network-package/src/cl/nimbus/nimbus_launcher.star")
-prysm = import_module("github.com/kurtosis-tech/eth-network-package/src/cl/prysm/prysm_launcher.star")
+prysm = import_module("./cl/prysm/prysm_launcher.star")
 teku = import_module("github.com/kurtosis-tech/eth-network-package/src/cl/teku/teku_launcher.star")
 
 genesis_constants = import_module("github.com/kurtosis-tech/eth-network-package/src/prelaunch_data_generator/genesis_constants/genesis_constants.star")

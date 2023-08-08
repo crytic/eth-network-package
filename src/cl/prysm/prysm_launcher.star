@@ -303,7 +303,6 @@ def get_validator_config(
 	cmd = [
 		"--accept-terms-of-use=true",#it's mandatory in order to run the node
 		"--chain-config-file=" + genesis_config_filepath,
-		"--beacon-rpc-gateway-provider=" + beacon_http_endpoint,
 		"--beacon-rpc-provider=" + beacon_rpc_endpoint,
 		"--wallet-dir=" + prysm_keystore_dirpath,
 		"--wallet-password-file=" + prysm_password_filepath,

@@ -1,4 +1,4 @@
-participant_network = import_module("github.com/kurtosis-tech/eth-network-package/src/participant_network.star")
+participant_network = import_module("./src/participant_network.star")
 input_parser = import_module("github.com/kurtosis-tech/eth-network-package/package_io/input_parser.star")
 
 static_files = import_module("github.com/kurtosis-tech/eth-network-package/static_files/static_files.star")
