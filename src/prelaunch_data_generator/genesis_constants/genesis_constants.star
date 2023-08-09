@@ -50,4 +50,10 @@ new_prefunded_account(
 		"0xFE08e6f330F4E5E624Ad759625B71B2e52594FEB",
 		"17fdf89989597e8bcac6cdfcc001b6241c64cece2c358ffc818b72ca70f5e1ce",
 	),
+
+	# create-deposit.sh
+new_prefunded_account(
+		"0x123463a4b065722e99115d6c222f267d9cabb524",
+		"2e0834786285daccd064ca17f1654f67b4aef298acbb82cef9ec422fb4975622",
+	),
 ]
