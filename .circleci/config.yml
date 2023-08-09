@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.3
+  kurtosis-docs-checker: crytic/docs-checker@0.2.3
 
 executors:
   ubuntu_vm:
@@ -9,7 +9,7 @@ executors:
       image: ubuntu-2004:202201-02
 
 parameters:
-  # To enable/disabled the check_latest_version workflow execution which will be triggered by this scheduled pipeline: https://app.circleci.com/settings/project/github/kurtosis-tech/eth-network-package/triggers
+  # To enable/disabled the check_latest_version workflow execution which will be triggered by this scheduled pipeline: https://app.circleci.com/settings/project/github/crytic/eth-network-package/triggers
   should-enable-check-latest-version-workflow:
     type: boolean
     default: false
@@ -29,7 +29,7 @@ jobs:
     steps:
       # Set up Kurtosis
       - run: |
-          echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+          echo "deb [trusted=yes] https://apt.fury.io/crytic/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
           sudo apt update
           sudo apt install kurtosis-cli
 
@@ -47,7 +47,7 @@ jobs:
     steps:
       # Set up Kurtosis
       - run: |
-          echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+          echo "deb [trusted=yes] https://apt.fury.io/crytic/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
           sudo apt update
           sudo apt install kurtosis-cli
 
