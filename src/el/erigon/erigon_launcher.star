@@ -1,9 +1,9 @@
-shared_utils = import_module("github.com/kurtosis-tech/eth-network-package/shared_utils/shared_utils.star")
-input_parser = import_module("github.com/kurtosis-tech/eth-network-package/package_io/input_parser.star")
-el_admin_node_info = import_module("github.com/kurtosis-tech/eth-network-package/src/el/el_admin_node_info.star")
-el_client_context = import_module("github.com/kurtosis-tech/eth-network-package/src/el/el_client_context.star")
+shared_utils = import_module("github.com/crytic/eth-network-package/shared_utils/shared_utils.star")
+input_parser = import_module("github.com/crytic/eth-network-package/package_io/input_parser.star")
+el_admin_node_info = import_module("github.com/crytic/eth-network-package/src/el/el_admin_node_info.star")
+el_client_context = import_module("github.com/crytic/eth-network-package/src/el/el_client_context.star")
 
-package_io = import_module("github.com/kurtosis-tech/eth-network-package/package_io/constants.star")
+package_io = import_module("github.com/crytic/eth-network-package/package_io/constants.star")
 
 # The dirpath of the execution data directory on the client container
 EXECUTION_DATA_DIRPATH_ON_CLIENT_CONTAINER = "/home/erigon/execution-data"
@@ -119,7 +119,7 @@ def get_config(
 		genesis_json_filepath_on_client,
 	)
 
-	# TODO remove this based on https://github.com/kurtosis-tech/eth2-merge-kurtosis-module/issues/152
+	# TODO remove this based on https://github.com/crytic/eth2-merge-kurtosis-module/issues/152
 	if len(existing_el_clients) == 0:
 		fail("Erigon needs at least one node to exist, which it treats as the bootnode")
 

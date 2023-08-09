@@ -11,12 +11,12 @@ This assumes you have the [Kurtosis CLI](https://docs.kurtosis.com/cli/) install
 To get started, simply run
 
 ```bash
-kurtosis run github.com/kurtosis-tech/eth-network-package
+kurtosis run github.com/crytic/eth-network-package
 ```
 
 ### Configuring the Network
 
-By default, this package spins up a single node with a [`geth`](https://github.com/kurtosis-tech/eth-network-package/blob/main/src/el/geth/geth_launcher.star) EL client and [`lighthouse`](https://github.com/kurtosis-tech/eth-network-package/blob/main/src/cl/lighthouse/lighthouse_launcher.star) CL client and comes with [seven prefunded keys](https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star) for testing, but
+By default, this package spins up a single node with a [`geth`](https://github.com/crytic/eth-network-package/blob/main/src/el/geth/geth_launcher.star) EL client and [`lighthouse`](https://github.com/crytic/eth-network-package/blob/main/src/cl/lighthouse/lighthouse_launcher.star) CL client and comes with [seven prefunded keys](https://github.com/crytic/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star) for testing, but
 these and other parameters are configurable through a json file Read more about the [node architecture here](https://ethereum.org/en/developers/docs/nodes-and-clients/node-architecture/). The package supports `geth`, `nethermind`, `besu`, `erigon`, `reth` el clients and `lodestar`, `lighthouse`, and `teku` cl clients.
 
 <details>
@@ -200,7 +200,7 @@ For example, this `eth-network-params.json` adds a second node, running a differ
 To run the package with your desired configuration (as specified in your `eth-network-params.json` file), simply run:
 
 ```bash
-kurtosis run github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
+kurtosis run github.com/crytic/eth-network-package "$(cat ~/eth-network-params.json)"
 ```
 
 ### Using this in your own package
@@ -210,7 +210,7 @@ together, you just need to do the following
 
 ```py
 # Import the Ethereum Package
-eth_network_module = import_module("github.com/kurtosis-tech/eth-network-package/main.star")
+eth_network_module = import_module("github.com/crytic/eth-network-package/main.star")
 
 # main.star of your Ethereum Network + Service package
 def run(plan, args):
