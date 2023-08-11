@@ -247,6 +247,7 @@ def get_beacon_config(
 		"--jwt-secret={0}".format(jwt_secret_filepath),
 		# vvvvvvvvv METRICS CONFIG vvvvvvvvvvvvvvvvvvvvv
 		"--disable-monitoring=false",
+		"--disable-peer-scorer",
 		"--monitoring-host=0.0.0.0",
 		"--monitoring-port={0}".format(BEACON_MONITORING_PORT_NUM)
 		# ^^^^^^^^^^^^^^^^^^^ METRICS CONFIG ^^^^^^^^^^^^^^^^^^^^^
